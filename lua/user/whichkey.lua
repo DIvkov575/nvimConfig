@@ -79,7 +79,7 @@ local opts = {
 }
 
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  -- ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
@@ -184,7 +184,9 @@ local mappings = {
     t = { "<cmd>ToggleTerm size=40 direction=vertical<cr>", "Vertical" },
 
   },
-  T = { ":Trouble<cr>", "Trouble"}
+  T = { ":Trouble<cr>", "Trouble"},
+  r = {":lua vim.lsp.buf.rename()<cr>", "Rename Var"},
+  a = {":!Python3 -m main.py", "Python Exec"}
 }
 
 which_key.setup(setup)

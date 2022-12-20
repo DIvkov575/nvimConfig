@@ -61,8 +61,7 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Terminal --
--- Better terminal navigation
+-- Terminal -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
@@ -70,9 +69,11 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- ToggleTerm
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true })
--- vim.keymap.set("v", "<C-/>", "gcc", { remap = true })
 vim.keymap.set("n", "<C-t>", ":Trouble<CR>", {remap = true, silent=true})
 vim.keymap.set("n", "<C-T>", ":TroubleClose<CR>", {remap = true, silent=true})
 vim.keymap.set("n", "<C-s>", ":w <CR>", { remap = true })
-vim.keymap.set("n", "<leader> ", ":Telesccope live_grep<CR>", { remap = true })
+vim.keymap.set("n", "<leader> ", ":Telescope live_grep<CR>", { remap = true })
+
+-- vim.keymap.set("n", "<C-/>", ":lua vim.lsp.buf.rename()<CR>", { remap = true })
+
 
